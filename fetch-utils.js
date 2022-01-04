@@ -1,8 +1,8 @@
 
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTc4NzE0OCwiZXhwIjoxOTU1MzYzMTQ4fQ.7scajYXYWyP_HSuQSqT-_Jj5mNA4lTwGigaUkSy0vk8';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MTMzNTI1MCwiZXhwIjoxOTU2OTExMjUwfQ._6oEzBPavtaUjc5bj9DQL-cR3KcsDdK9j6AET2Pd6Ek';
 
 
-const SUPABASE_URL = 'https://piaqjulqjuhvkhhoriep.supabase.co';
+const SUPABASE_URL = 'https://npihlfsmxggucpycootw.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -10,24 +10,18 @@ export async function getCars() {
     const response = await client
         .from('cars')
         .select();
-
-    return checkError(response);
+    console.log(response);
+    return response.data;
 }
 
 export async function getCar(id) {
     const response = await client
         .from('cars')
         .select()
-        .match({ id, })
+        .match({ id })
         .single();
     return checkError(response);
 }
-
-
-
-
-
-
 
 function checkError({ data, error }) {
     return error ? console.error(error) : data;

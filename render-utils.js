@@ -6,19 +6,13 @@ export async function renderCarCard(car) {
     const carYear = document.createElement('h3');
     const carImg = document.createElement('img');
 
-    carImg.src = `./assets/${car.make}.jpeg`;
+    carImg.src = `./assets/${car.image_id}.jpeg`;
     carMake.textContent = car.make;
     carModel.textContent = car.model;
     carYear.textContent = car.year;
 
-
-
-
     carCard.classList.add('car-card');
     carName.append(carYear, carMake, carModel);
     carCard.append(carName, carImg);
-
-
-
-
 }
+

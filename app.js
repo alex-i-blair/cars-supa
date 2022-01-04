@@ -9,9 +9,13 @@ import {
 // let state
 const carsContainerEl = document.querySelector('#cars-container');
 
-window.addEventListener('load', async(event)=> {
-    event.preventDefault();
+
+
+
+window.addEventListener('load', async()=> {
+
     const cars = await getCars();
+    console.log(cars);
     for (let car of cars) {
         const carCard = renderCarCard(car);
         carsContainerEl.append(carCard);
