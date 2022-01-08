@@ -37,6 +37,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    width: auto;
 }
 
 section {
@@ -89,3 +90,38 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+h3 {
+    margin: 0 10px;
+}
+.car-card {
+    display: flex;
+    flex-direction: column;
+    /* height: 300px; */
+    width: 400px;
+    margin: 20px;
+    padding: 0;
+    border: solid gray 3px;
+    border-radius: 5px;
+    background-color: gray;
+    color: honeydew;
+    cursor: pointer;
+}
+
+.car-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+button {
+    cursor: pointer;
+}
+.car-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+

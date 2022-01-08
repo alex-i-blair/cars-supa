@@ -10,7 +10,7 @@ export async function getCars() {
     const response = await client
         .from('cars')
         .select();
-    console.log(response);
+    // console.log(response);
     return response.data;
 }
 
@@ -26,3 +26,4 @@ export async function getCar(id) {
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
+
